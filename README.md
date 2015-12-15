@@ -8,7 +8,7 @@ You don't trust your provider's security methods?
 Then get your own clowd!
 
 Nebula is a lightweight solution that will provide the essential features for a personal cloud, but running in your own house.
-This project is under `Beta` development phase and is not suitable for production use.
+This project is under definition phase and is not suitable for production use.
 
 # Quick Start for the developer
 -------------------------------
