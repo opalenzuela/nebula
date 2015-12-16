@@ -3,12 +3,13 @@ Nebula: your personal cloud
 
 Tired of depending on limited cloud service providers? 
 You don't want to pay a monthly fee for just a few GB of cloud storage? 
-Do you want to keep the property of your own files? 
+Do you want to keep the rights of your own files? 
 You don't trust your provider's security methods? 
 Then get your own clowd!
 
 Nebula is a lightweight solution that will provide the essential features for a personal cloud, but running in your own house.
 This project is under `Beta` development phase and is not suitable for production use.
+If you are interested in this project, you can join the developer team and help improving it!
 
 # Quick Start for the developer
 -------------------------------
