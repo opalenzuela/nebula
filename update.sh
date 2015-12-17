@@ -7,6 +7,6 @@ else
 	cd ..
 	test -f master.zip && rm master.zip
 	wget --quiet https://github.com/opalenzuela/nebula/archive/master.zip
-	unzip master.zip
+	unzip -o master.zip
 	cd nebula-master
 fi
