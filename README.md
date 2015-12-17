@@ -16,12 +16,14 @@ If you are interested in this project, you can join the developer team and help 
 
 ## Deploying from GIT project on Linux / Mac OSX
 1. Checkout of the project: `git clone https://github.com/opalenzuela/nebula`
-2. Start wizard: `sh ./nebula/start.sh`
+2. Enter the directory: `cd nebula`
+3. Start deployment script: `sh ./start.sh`
 
 
 ## Just install (for use in Raspbian, for instance)
 1. Download full project: `wget https://github.com/opalenzuela/nebula/archive/master.zip`
 2. Unzip package: `unzip master.zip`
-3. Start wizard: `sh ./nebula-master/start.sh`
+3. Enter the directory: `cd nebula-master`
+4. Start deployment script: `sh ./start.sh`
 
 
