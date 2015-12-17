@@ -27,7 +27,6 @@ sudo mkdir $HTMLDIR
 sudo chown $USER $HTMLDIR 
 
 
-
 echo "Creating configuration files ..."
 sleep 1
 if test -w $CFGFILE
@@ -43,10 +42,20 @@ else
 	exit 1
 fi
 
+
+echo "Installing dependencies ... "
 sleep 2
-echo "Checking dependencies ... "
 #TODO Adapt it for different distributions, apart of Debian
 if test -x /usr/bin/apt-get
 then
-	apt-get install wget
+	sudo apt-get install wget python
 fi
+
+
+
+echo "Copying web files ..."
+cp -v www/* $HTMLDIR/
+
+echo 
+echo "Deployment finished!"
+echo
