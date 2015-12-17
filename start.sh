@@ -28,6 +28,7 @@ if touch $CFGFILE; then
 	echo "   $CFGFILE created"
 else
 	echo "ERROR: Permission denied"
+	exit 1
 fi
 
 echo "Checking dependencies ... "
