@@ -10,3 +10,4 @@ else
 	unzip -o master.zip
 	cd nebula-master
 fi
+chmod +x *.sh

@@ -9,18 +9,30 @@
 
 echo "Deployment script started"
 echo
-sleep 1
 echo "Locating directories ... "
-test -d /var/www/html && HTMLDIR="/var/www/html"
-test -d /usr/local/ && BINDIR="/usr/local/"
-test -d /etc/ && CFGDIR="/etc/"
-#TODO Add all the possible options for each distribution
 sleep 1
+test -d /var/www/html && HTMLDIR="/var/www/html/nebula"
+#test -d /usr/local/ && BINDIR="/usr/local/"
+test -d /etc/ && CFGFILE="/etc/nebula.cfg"
+BINDIR=`pwd`
+#TODO Add all the possible options for each distribution
+
+
+
+echo "Requesting root privileges to create config file and web directory"
+sleep 1
+sudo touch $CFGFILE
+sudo chown $USER $CFGFILE 
+sudo mkdir $HTMLDIR
+sudo chown $USER $HTMLDIR 
+
 
 
 echo "Creating configuration files ..."
-CFGFILE=$CFGDIR/nebula.cfg
-if touch $CFGFILE; then
+sleep 1
+if test -w $CFGFILE
+then
+	# Load existent configuration file
 	. $CFGFILE
 	echo > $CFGFILE
 	echo "HTMLDIR=$HTMLDIR" >> $CFGFILE
@@ -31,6 +43,10 @@ else
 	exit 1
 fi
 
+sleep 2
 echo "Checking dependencies ... "
 #TODO Adapt it for different distributions, apart of Debian
-
+if test -x /usr/bin/apt-get
+then
+	apt-get install wget
+fi
