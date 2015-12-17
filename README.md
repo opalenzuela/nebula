@@ -22,6 +22,6 @@ If you are interested in this project, you can join the developer team and help 
 ## Just install (for use in Raspbian, for instance)
 1. Download full project: `wget https://github.com/opalenzuela/nebula/archive/master.zip`
 2. Unzip package: `unzip master.zip`
-3. Start wizard: `sh ./nebula/start.sh`
+3. Start wizard: `sh ./nebula-master/start.sh`
 
 
