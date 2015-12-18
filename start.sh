@@ -23,7 +23,7 @@ echo "Requesting root privileges to create config file and web directory"
 sleep 1
 sudo touch $CFGFILE
 sudo chown $USER $CFGFILE 
-sudo mkdir $HTMLDIR
+sudo mkdir -p $HTMLDIR
 sudo chown $USER $HTMLDIR 
 
 
@@ -48,7 +48,7 @@ sleep 2
 #TODO Adapt it for different distributions, apart of Debian
 if test -x /usr/bin/apt-get
 then
-	sudo apt-get install wget python
+	sudo apt-get install wget python libapache2-mod-python php5 
 fi
 
 
